@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "db:migrate": "cd ./src/db && npx sequelize-cli db:migrate",
-    "server-dev": "nodemon ./index.ts",
+    "server-dev": "nodemon ./index.ts && npx sequelize db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf ./build && tsc",
     "prod": "npm run build && node build/index.js"

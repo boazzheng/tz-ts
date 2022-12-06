@@ -20,7 +20,7 @@ interface UserInstance extends Model<UserAttr, UserCreationAttr>, UserAttr {
 }
 
 export const User = database.connection.define<UserInstance>(
-  "User",
+  "users",
   {
     id: {
       type: Sequelize.INTEGER,
@@ -43,7 +43,7 @@ export const User = database.connection.define<UserInstance>(
   },
   {
     freezeTableName: true,
-    tableName: "User",
+    tableName: "users",
     initialAutoIncrement: "1",
   }
 );

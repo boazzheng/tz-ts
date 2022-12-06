@@ -21,7 +21,7 @@ interface ManagerInstance
 }
 
 export const Manager = database.connection.define<ManagerInstance>(
-    "Manager",
+    "managers",
     {
         id: {
             type: Sequelize.INTEGER,
@@ -35,6 +35,7 @@ export const Manager = database.connection.define<ManagerInstance>(
         }
     },
     {
+		timestamps: true,
         freezeTableName: true,
         tableName: "managers"
     }

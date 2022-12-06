@@ -57,7 +57,7 @@ export const Employee = database.connection.define<EmployeeInstance>(
     },
     {
         freezeTableName: true,
-        tableName: "Employee"
+        tableName: "employees"
     }
 );
 

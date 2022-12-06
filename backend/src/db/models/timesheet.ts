@@ -24,7 +24,7 @@ interface TSInstance extends Model<TSAttr, TSCreationAttr>, TSAttr {
 }
 
 export const TimeSheet = database.connection.define<TSInstance>(
-    "TimeSheet",
+    "timesheets",
     {
         id: {
             type: Sequelize.INTEGER,
@@ -33,7 +33,7 @@ export const TimeSheet = database.connection.define<TSInstance>(
             primaryKey: true
         },
         date: {
-            type: Sequelize.TIME,
+            type: Sequelize.DATEONLY,
             allowNull: false
         },
         init1: {
@@ -64,7 +64,7 @@ export const TimeSheet = database.connection.define<TSInstance>(
     },
     {
         freezeTableName: true,
-        tableName: "TimeSheet",
+        tableName: "timesheets",
         initialAutoIncrement: "1"
     }
 );
